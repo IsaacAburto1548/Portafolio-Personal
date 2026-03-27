@@ -6,23 +6,28 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
-    category: 'Frontend',
+    category: 'Lenguajes',
     icon: '💻',
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML/CSS'],
+    skills: ['Kotlin', 'TypeScript', 'Java', 'JavaScript', 'Python', 'C++', 'HTML', 'CSS'],
   },
   {
-    category: 'Backend',
+    category: 'Frameworks',
+    icon: '🚀',
+    skills: ['Jetpack Compose', 'Next.js', 'React', 'Angular', 'Tailwind CSS 4'],
+  },
+  {
+    category: 'Bases de Datos',
     icon: '⚙️',
-    skills: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB'],
+    skills: ['SQL', 'MySQL', 'SQL Server', 'PostgreSQL', 'Room'],
   },
   {
     category: 'Herramientas',
     icon: '🛠️',
-    skills: ['Git', 'GitHub', 'Docker', 'Linux', 'Figma'],
+    skills: ['Git', 'GitHub', 'Azure DevOps', 'Android Studio', 'Workbench', 'Cursor AI'],
   },
   {
-    category: 'Actualmente aprendiendo',
-    icon: '🚀',
-    skills: ['AWS', 'GraphQL', 'React Native'],
+    category: 'Conceptos & Otros',
+    icon: '🧠',
+    skills: ['MVVM', 'Clean Architecture', 'MVC', 'Clean Code', 'Inglés (B1)'],
   },
 ];

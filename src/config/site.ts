@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: 'Isaac Aburto',
-  title: 'Desarrollador Full Stack | Isaac Aburto',
-  description: 'Desarrollador de software apasionado por crear aplicaciones web modernas. Especializado en React, Next.js y Node.js.',
+  title: 'Desarrollador de Software | Móvil & Web',
+  description: 'Desarrollador enfocado en aplicaciones móviles y web con experiencia en Kotlin (Jetpack Compose) y Next.js. Especializado en arquitecturas escalables y desarrollo offline-first.',
   url: 'https://isaac-aburto.vercel.app',
   github: 'https://github.com/IsaacAburto1548',
-  linkedin: 'https://linkedin.com/in/tu-perfil', // User should update this
-  email: 'tu@email.com', // User should update this
-  location: 'Nicaragua', // Assuming based on name/history
+  linkedin: 'https://linkedin.com/in/isaac-aburto-torres',
+  email: 'isaacaburto.iat94@gmail.com',
+  location: 'Liberia, Guanacaste, Costa Rica',
   openToWork: true,
 };

@@ -21,17 +21,8 @@ export default function SobreMiPage() {
       <div className='flex flex-col sm:flex-row gap-8 mb-14'>
         <div className='flex-shrink-0'>
           <div className='w-[120px] h-[120px] bg-zinc-200 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-400'>
-             <span className='text-xs'>Foto aquí</span>
+             <span className='text-xs text-center px-2'>Foto de Isaac</span>
           </div>
-          {/* 
-          <Image
-            src='/avatar.jpg'
-            alt={siteConfig.name}
-            width={120}
-            height={120}
-            className='rounded-2xl object-cover'
-          /> 
-          */}
         </div>
         <div>
           <h2 className='text-xl font-semibold text-zinc-900 dark:text-white mb-1'>
@@ -42,16 +33,14 @@ export default function SobreMiPage() {
               <MapPin size={14} /> {siteConfig.location}
             </span>
             <span className='flex items-center gap-2'>
-              <GraduationCap size={14} /> Ingeniería de Software
+              <GraduationCap size={14} /> Ing. Sistemas (UNA) | Ing. Eléctrica (UCR)
             </span>
             <span className='flex items-center gap-2'>
-              <Briefcase size={14} /> Desarrollador Full Stack
+              <Briefcase size={14} /> Desarrollador Móvil & Full Stack
             </span>
           </div>
           <p className='text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed'>
-            Desarrollador apasionado por la tecnología y el aprendizaje continuo. 
-            Me enfoco en crear soluciones eficientes, escalables y con una gran experiencia de usuario. 
-            Actualmente cursando mis estudios y trabajando en proyectos que desafían mis habilidades.
+            {siteConfig.description} Me especializo en arquitecturas escalables y desarrollo de aplicaciones offline-first, aplicando buenas prácticas como Clean Architecture y patrones de diseño.
           </p>
         </div>
       </div>
