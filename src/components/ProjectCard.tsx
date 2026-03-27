@@ -11,8 +11,8 @@ const typeConfig = {
 export default function ProjectCard({ project }: { project: Project }) {
   const type = typeConfig[project.type];
 
-  return (
-    <div className='group flex flex-col gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 bg-white dark:bg-zinc-900/50'>
+  const CardContent = (
+    <div className='group flex flex-col h-full gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 bg-white dark:bg-zinc-900/50'>
       {/* Header: tipo + año + links */}
       <div className='flex items-start justify-between'>
         <div className='flex items-center gap-2'>
@@ -24,19 +24,15 @@ export default function ProjectCard({ project }: { project: Project }) {
         
         <div className='flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity'>
           {project.github && (
-            <Link 
-              href={project.github} 
-              target='_blank' 
-              className='text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors' 
-              aria-label='Ver repositorio'
-            >
+            <div className='text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors'>
               <Github size={15} />
-            </Link>
+            </div>
           )}
           {project.demo && (
             <Link 
               href={project.demo} 
               target='_blank' 
+              onClick={(e) => e.stopPropagation()}
               className='text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors' 
               aria-label='Ver demo'
             >
@@ -69,4 +65,14 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
     </div>
   );
+
+  if (project.github) {
+    return (
+      <Link href={project.github} target='_blank' className='block h-full'>
+        {CardContent}
+      </Link>
+    );
+  }
+
+  return CardContent;
 }

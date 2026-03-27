@@ -26,7 +26,7 @@ const contactLinks = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'Perfil Profesional',
+    value: siteConfig.linkedin.split('/').pop(),
     href: siteConfig.linkedin,
     description: 'Conectemos en la red profesional.',
   },
