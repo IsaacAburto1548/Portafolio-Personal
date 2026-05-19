@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { siteConfig } from '@/config/site';
 import { skillCategories } from '@/data/skills';
 import SkillBadge from '@/components/SkillBadge';

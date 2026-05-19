@@ -10,30 +10,37 @@ const typeConfig = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   const type = typeConfig[project.type];
+  const mainLink = project.github || project.demo;
 
-  const CardContent = (
-    <div className='group flex flex-col h-full gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 bg-white dark:bg-zinc-900/50'>
+  return (
+    <article className='relative group flex flex-col h-full gap-4 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 bg-white dark:bg-zinc-900/50'>
       {/* Header: tipo + año + links */}
       <div className='flex items-start justify-between'>
         <div className='flex items-center gap-2'>
           <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${type.className}`}>
             {type.emoji} {type.label}
           </span>
-          <span className='text-xs text-zinc-400'>{project.year}</span>
+          <span className='text-xs text-zinc-400 relative z-10'>{project.year}</span>
         </div>
         
-        <div className='flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity'>
+        <div className='flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity relative z-10'>
           {project.github && (
-            <div className='text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors'>
+            <Link
+              href={project.github}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-1'
+              aria-label='Ver código fuente en GitHub'
+            >
               <Github size={15} />
-            </div>
+            </Link>
           )}
           {project.demo && (
             <Link 
               href={project.demo} 
               target='_blank' 
-              onClick={(e) => e.stopPropagation()}
-              className='text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors' 
+              rel='noopener noreferrer'
+              className='text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-1' 
               aria-label='Ver demo'
             >
               <ExternalLink size={15} />
@@ -45,7 +52,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Título y descripción */}
       <div className='flex-1'>
         <h3 className='font-semibold text-zinc-900 dark:text-white mb-1.5 group-hover:text-indigo-600 transition-colors'>
-          {project.title}
+          {mainLink ? (
+            <Link href={mainLink} target='_blank' rel='noopener noreferrer' className='before:absolute before:inset-0'>
+              {project.title}
+            </Link>
+          ) : (
+            project.title
+          )}
         </h3>
         <p className='text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed'>
           {project.description}
@@ -53,7 +66,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {/* Tags de tecnologías */}
-      <div className='flex flex-wrap gap-1.5 mt-auto'>
+      <div className='flex flex-wrap gap-1.5 mt-auto relative z-10'>
         {project.tags.map((tag) => (
           <span 
             key={tag} 
@@ -63,16 +76,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
       </div>
-    </div>
+    </article>
   );
-
-  if (project.github) {
-    return (
-      <Link href={project.github} target='_blank' className='block h-full'>
-        {CardContent}
-      </Link>
-    );
-  }
-
-  return CardContent;
 }

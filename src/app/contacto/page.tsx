@@ -49,6 +49,7 @@ export default function ContactoPage() {
             key={label} 
             href={href} 
             target='_blank'
+            rel='noopener noreferrer'
             className='flex items-center gap-4 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all group'
           >
             <div className='p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900 transition-colors'>

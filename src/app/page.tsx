@@ -27,32 +27,35 @@ export default function Home() {
         )}
 
         <h1 className='text-4xl font-bold text-zinc-900 dark:text-white mb-4 leading-tight'>
-          Hola, soy <span className='text-indigo-600'>{siteConfig.name}</span> 👋
+          Hola, soy <span className='text-indigo-600'>{siteConfig.name}</span>
         </h1>
-        
+
         <p className='text-xl text-zinc-500 dark:text-zinc-400 mb-8 leading-relaxed'>
           {siteConfig.description}
         </p>
 
         {/* Botones de acción */}
         <div className='flex flex-wrap gap-3 mb-16'>
-          <Link 
-            href={siteConfig.github} 
+          <Link
+            href={siteConfig.github}
             target='_blank'
+            rel='noopener noreferrer'
             className='flex items-center gap-2 text-sm px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors text-zinc-700 dark:text-zinc-300'
           >
             <Github size={16} /> GitHub
           </Link>
-          <Link 
-            href={siteConfig.linkedin} 
+          <Link
+            href={siteConfig.linkedin}
             target='_blank'
+            rel='noopener noreferrer'
             className='flex items-center gap-2 text-sm px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors text-zinc-700 dark:text-zinc-300'
           >
             <Linkedin size={16} /> LinkedIn
           </Link>
-          <Link 
-            href='/cv.pdf' 
+          <Link
+            href='/cv.pdf'
             target='_blank'
+            rel='noopener noreferrer'
             className='flex items-center gap-2 text-sm px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-colors'
           >
             <Download size={16} /> Descargar CV
@@ -69,14 +72,14 @@ export default function Home() {
         <h2 className='text-xl font-semibold text-zinc-900 dark:text-white mb-6'>
           Proyectos destacados
         </h2>
-        
+
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-6'>
           {featured.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        <Link 
+        <Link
           href='/proyectos'
           className='inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors group'
         >
