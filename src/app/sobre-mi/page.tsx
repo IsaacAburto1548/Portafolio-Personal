@@ -32,16 +32,24 @@ export default function SobreMiPage() {
             <span className='flex items-center gap-2'>
               <MapPin size={14} /> {siteConfig.location}
             </span>
-            <span className='flex items-center gap-2'>
-              <GraduationCap size={14} /> Ing. Sistemas (UNA) | Ing. Eléctrica (UCR)
+            <span className='flex items-center gap-2 text-zinc-600 dark:text-zinc-400'>
+              <GraduationCap size={14} /> Ingeniería en Sistemas, Universidad Nacional (Sede Chorotega)
             </span>
-            <span className='flex items-center gap-2'>
-              <Briefcase size={14} /> Desarrollador Móvil & Full Stack
+            <span className='flex items-center gap-2 text-zinc-600 dark:text-zinc-400'>
+              <Briefcase size={14} /> Desarrollador Móvil (Android/Kotlin) & Full Stack (Next.js)
             </span>
           </div>
-          <p className='text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed'>
-            {siteConfig.description} Me especializo en arquitecturas escalables y desarrollo de aplicaciones offline-first, aplicando buenas prácticas como Clean Architecture y patrones de diseño.
-          </p>
+          <div className='flex flex-col gap-4 text-[15px] text-zinc-600 dark:text-zinc-400 leading-relaxed'>
+            <p>
+              Desarrollador de software con enfoque en soluciones móviles y web de alto rendimiento. Actualmente curso Ingeniería en Sistemas en la Universidad Nacional (Sede Chorotega), aplicando arquitecturas modernas para resolver problemas del mundo real.
+            </p>
+            <p>
+              Mi especialidad es el desarrollo nativo en Android con Kotlin y Jetpack Compose, utilizando MVVM como arquitectura base y Hilt para inyección de dependencias. Tengo experiencia creando aplicaciones Offline-First con persistencia en Room (SQLite) y flujos reactivos mediante Kotlin Flow.
+            </p>
+            <p>
+              En el área web, domino el ecosistema de Next.js y TypeScript, gestionando proyectos mediante Azure DevOps. Soy un fiel creyente del AI-Assisted Programming (Vibe Coding) para acelerar el prototipado y garantizar la calidad del código mediante Clean Architecture.
+            </p>
+          </div>
         </div>
       </div>
 

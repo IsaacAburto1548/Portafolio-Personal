@@ -13,7 +13,7 @@ export const skillCategories: SkillCategory[] = [
   {
     category: 'Frameworks',
     icon: '🚀',
-    skills: ['Jetpack Compose', 'Next.js', 'React', 'Angular', 'Tailwind CSS 4'],
+    skills: ['Jetpack Compose', 'Next.js', 'React', 'Angular', 'Tailwind CSS 4', 'Hilt'],
   },
   {
     category: 'Bases de Datos',
@@ -28,6 +28,6 @@ export const skillCategories: SkillCategory[] = [
   {
     category: 'Conceptos & Otros',
     icon: '🧠',
-    skills: ['MVVM', 'Clean Architecture', 'MVC', 'Clean Code', 'Inglés (B1)'],
+    skills: ['MVVM', 'Clean Architecture', 'Offline-First', 'Kotlin Flow', 'Clean Code', 'Vibe Coding', 'Inglés (B1)'],
   },
 ];
