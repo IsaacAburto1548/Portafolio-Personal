@@ -1,7 +1,5 @@
 # Portafolio Personal - Isaac Aburto
 
-![Demo del Portafolio](./public/portfolio_demo.webp)
-
 Este es el repositorio de mi portafolio personal, construido con tecnologías web modernas, destacando mi perfil como desarrollador Full Stack y Mobile (Android/Kotlin).
 
 ## 🚀 Tecnologías Principales
