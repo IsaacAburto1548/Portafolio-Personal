@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portafolio Personal - Isaac Aburto
 
-## Getting Started
+![Demo del Portafolio](./public/portfolio_demo.webp)
 
-First, run the development server:
+Este es el repositorio de mi portafolio personal, construido con tecnologías web modernas, destacando mi perfil como desarrollador Full Stack y Mobile (Android/Kotlin).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tecnologías Principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **Framework:** [Next.js 15+ (App Router)](https://nextjs.org/)
+*   **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
+*   **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/)
+*   **Animaciones:** [Framer Motion](https://www.framer.com/motion/)
+*   **Iconos:** [Lucide React](https://lucide.dev/)
+*   **Temas:** Soporte para Dark/Light Mode a través de `next-themes`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Características
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*   **Diseño Responsivo:** Completamente adaptable a dispositivos móviles, tablets y escritorios, con un menú de navegación intuitivo.
+*   **Accesibilidad y SEO:** Uso de etiquetas semánticas, OpenGraph (metadata) adaptado y seguridad de rutas con headers HTTP pre-configurados.
+*   **Animaciones Fluidas:** Transiciones suaves de componentes al entrar en el viewport o al alternar pestañas gracias a *Framer Motion*.
+*   **Modo Oscuro (Dark Mode):** Alternancia del tema persistente y estético compatible con las configuraciones del sistema del usuario.
 
-## Learn More
+## 🛠️ Desarrollo Local
 
-To learn more about Next.js, take a look at the following resources:
+Para correr el portafolio en tu máquina local, sigue estos pasos:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/IsaacAburto1548/Portafolio-Personal.git
+   cd Portafolio-Personal
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Ejecutar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado. El entorno de desarrollo soportará "Hot Reload", lo que significa que el sitio se actualizará al guardar cambios en el código.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚢 Despliegue (Deploy)
+
+El proyecto está diseñado para funcionar perfectamente en plataformas de *Serverless edge*, especialmente **Vercel**.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FIsaacAburto1548%2FPortafolio-Personal)
+
+Para desplegar:
+1. Crea una cuenta en [Vercel](https://vercel.com).
+2. Conecta tu cuenta de GitHub.
+3. Importa el repositorio `IsaacAburto1548/Portafolio-Personal`.
+4. Vercel detectará automáticamente que es un proyecto de Next.js, por lo que no necesitarás hacer configuración adicional.
+5. Haz clic en **Deploy**.
+
+## 🛡️ Seguridad y Buenas Prácticas
+
+El proyecto incluye las siguientes precauciones en la configuración base (`next.config.ts`):
+*   `Strict-Transport-Security` (HSTS)
+*   `X-Frame-Options` bloqueado (`SAMEORIGIN`) para prevenir Clickjacking.
+*   Políticas de `Referrer-Policy` y `X-Content-Type-Options`.
+*   Uso de `rel="noopener noreferrer"` en todos los enlaces salientes de la aplicación.
+
+---
+
+> Hecho con ☕ y **Next.js**.
