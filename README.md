@@ -1,66 +1,34 @@
 # Portafolio Personal - Isaac Aburto
 
-Este es el repositorio de mi portafolio personal, construido con tecnologías web modernas, destacando mi perfil como desarrollador Full Stack y Mobile (Android/Kotlin).
+Este es el repositorio oficial de mi portafolio web interactivo. El sistema fue desarrollado desde cero con el objetivo principal de demostrar mis habilidades técnicas, destacar mi perfil como desarrollador Full Stack y Mobile (Android/Kotlin), y presentar mis proyectos más relevantes a través de una arquitectura limpia y moderna.
 
 ## 🚀 Tecnologías Principales
 
-*   **Framework:** [Next.js 15+ (App Router)](https://nextjs.org/)
-*   **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
-*   **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Animaciones:** [Framer Motion](https://www.framer.com/motion/)
-*   **Iconos:** [Lucide React](https://lucide.dev/)
-*   **Temas:** Soporte para Dark/Light Mode a través de `next-themes`.
+El proyecto ha sido concebido para garantizar un rendimiento óptimo y una experiencia de usuario fluida, utilizando el ecosistema actual más robusto de React:
 
-## 📦 Características
+*   **Framework:** [Next.js 15+ (App Router)](https://nextjs.org/) para Server-Side Rendering (SSR) y optimización de rutas.
+*   **Lenguaje:** [TypeScript](https://www.typescriptlang.org/) para proporcionar tipado estático estricto y escalabilidad.
+*   **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) enfocado en un diseño utility-first.
+*   **Animaciones:** [Framer Motion](https://www.framer.com/motion/) para transiciones orgánicas.
+*   **Iconografía:** [Lucide React](https://lucide.dev/)
+*   **Temas:** Soporte integral de Dark/Light Mode adaptativo a través de `next-themes`.
 
-*   **Diseño Responsivo:** Completamente adaptable a dispositivos móviles, tablets y escritorios, con un menú de navegación intuitivo.
-*   **Accesibilidad y SEO:** Uso de etiquetas semánticas, OpenGraph (metadata) adaptado y seguridad de rutas con headers HTTP pre-configurados.
-*   **Animaciones Fluidas:** Transiciones suaves de componentes al entrar en el viewport o al alternar pestañas gracias a *Framer Motion*.
-*   **Modo Oscuro (Dark Mode):** Alternancia del tema persistente y estético compatible con las configuraciones del sistema del usuario.
+## 📦 Características del Sistema
 
-## 🛠️ Desarrollo Local
+*   **Diseño Responsivo:** Completamente adaptable a dispositivos móviles, tablets y escritorios, integrando componentes dinámicos como menús de navegación interactivos para pantallas reducidas.
+*   **Accesibilidad y SEO:** Uso riguroso de etiquetas semánticas (`<article>`, `<nav>`, etc.), OpenGraph (metadata) adaptado a mis perfiles profesionales y seguridad de rutas con headers HTTP pre-configurados.
+*   **Animaciones Fluidas:** Transiciones suaves de componentes al entrar en el viewport o al cambiar de vistas.
+*   **Modo Oscuro Inteligente:** Alternancia de temas persistente compatible con las configuraciones del sistema nativo del usuario.
 
-Para correr el portafolio en tu máquina local, sigue estos pasos:
+## 🛡️ Seguridad y Buenas Prácticas Implementadas
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/IsaacAburto1548/Portafolio-Personal.git
-   cd Portafolio-Personal
-   ```
+La estructura técnica incorpora varias políticas y prevenciones directamente desde la configuración base de Next.js (`next.config.ts`) y la semántica de HTML5:
 
-2. **Instalar dependencias:**
-   ```bash
-   npm install
-   ```
-
-3. **Ejecutar el servidor de desarrollo:**
-   ```bash
-   npm run dev
-   ```
-
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado. El entorno de desarrollo soportará "Hot Reload", lo que significa que el sitio se actualizará al guardar cambios en el código.
-
-## 🚢 Despliegue (Deploy)
-
-El proyecto está diseñado para funcionar perfectamente en plataformas de *Serverless edge*, especialmente **Vercel**.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FIsaacAburto1548%2FPortafolio-Personal)
-
-Para desplegar:
-1. Crea una cuenta en [Vercel](https://vercel.com).
-2. Conecta tu cuenta de GitHub.
-3. Importa el repositorio `IsaacAburto1548/Portafolio-Personal`.
-4. Vercel detectará automáticamente que es un proyecto de Next.js, por lo que no necesitarás hacer configuración adicional.
-5. Haz clic en **Deploy**.
-
-## 🛡️ Seguridad y Buenas Prácticas
-
-El proyecto incluye las siguientes precauciones en la configuración base (`next.config.ts`):
-*   `Strict-Transport-Security` (HSTS)
-*   `X-Frame-Options` bloqueado (`SAMEORIGIN`) para prevenir Clickjacking.
-*   Políticas de `Referrer-Policy` y `X-Content-Type-Options`.
-*   Uso de `rel="noopener noreferrer"` en todos los enlaces salientes de la aplicación.
+*   Implementación de `Strict-Transport-Security` (HSTS).
+*   Encabezado `X-Frame-Options` en modalidad `SAMEORIGIN` para la contención contra Clickjacking.
+*   Políticas estrictas de `Referrer-Policy` y `X-Content-Type-Options`.
+*   Sanitización en la apertura de hipervínculos utilizando atributos `rel="noopener noreferrer"` en todos los accesos a repositorios o demos externos.
 
 ---
 
-> Hecho con ☕ y **Next.js**.
+> Arquitectura diseñada y construida por **Isaac Aburto**.
